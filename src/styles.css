@@ -1,0 +1,141 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+  background: url("https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_794/MTk0MzMyMTg3NTYxMzcxMzEz/react-animated-background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+.App div {
+  overflow: auto;
+}
+
+.App div::-webkit-scrollbar {
+  display: none;
+}
+
+.AppointmentCard {
+  width: 300px;
+  height: 220px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.233);
+  background: white;
+  border-radius: 5px;
+  animation: fadein 1s linear forwards;
+}
+
+.item-fadeout {
+  animation: fadeout 1s linear forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+li,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  line-height: 1.9rem;
+}
+
+.CardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem 0;
+  justify-items: center;
+  width: 800px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.left-align {
+  text-align: left;
+  margin: 0.25rem auto;
+  padding-left: 0.5rem;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  text-decoration: line-through;
+}
+
+.AppointmentForm {
+  border-left: 3px dashed rgb(104, 78, 78);
+}
+
+.AppointmentForm form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 2rem 5rem;
+  border: 0.5px solid green;
+  background: #eaffea;
+}
+
+.add-btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bolder;
+  background: mediumseagreen;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: mediumspringgreen;
+}
+
+form input {
+  line-height: 1.5rem;
+  border: 1px solid green;
+  margin: 0.3rem 0;
+  text-align: center;
+}
+
+h1 {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.no-appt {
+  animation: fadein 1.5s linear forwards;
+}
